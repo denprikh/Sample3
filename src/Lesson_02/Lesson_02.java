@@ -24,12 +24,12 @@ public class Lesson_02 {
 
         if (aLessThenB) {
             System.out.println("a < b");
-        }else {
+        } else {
             System.out.println("False");
         }
         if (aGreaterOrEqualThenB) {
             System.out.println("a >= b");
-        }else {
+        } else {
             System.out.println("False");
         }
         if (aLessOrEqualThenB) {
@@ -42,7 +42,7 @@ public class Lesson_02 {
         System.out.println("Введите число:");
         int num = scanner.nextInt();
 
-        if (num%2 == 0) {
+        if (num % 2 == 0) {
             System.out.println("Число четное");
         } else {
             System.out.println("Число нечетное");
