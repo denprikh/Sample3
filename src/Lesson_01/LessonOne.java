@@ -2,9 +2,8 @@ package Lesson_01;
 
 import java.util.Scanner;
 
-public class Lesson_01 {
+public class LessonOne {
     public static void main(String[] args) {
-
         int value1 = 0;
         int value2 = 5;
         int sum = value1 + value2;
