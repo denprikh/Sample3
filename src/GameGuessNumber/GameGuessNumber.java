@@ -3,19 +3,22 @@ package GameGuessNumber;
 import java.util.Scanner;
 
 public class GameGuessNumber {
-    public static void main(String[] args) {
-        //max value of guess number
-        int maxNumber = 100;
-        //generate guess number
-        int guessNumber = (int) (Math.random() * (maxNumber + 1));
-        //number of attempts
-        int numOfAttempts = 10;
 
+    public static void main(String[] args) {
+        int maxNumber = 100;
+        int guessNumber = (int) (Math.random() * (maxNumber + 1));
+        int numOfAttempts = 10;
         System.out.println("Угадай число от 0 до " + maxNumber);
+        int userInput;
+        Scanner sc = new Scanner(System.in);
 
         for (int i = 1; i <= numOfAttempts; i++) {
             System.out.println(i + "-я попытка: ");
-            int userInput = new Scanner(System.in).nextInt();
+            while (!sc.hasNextInt()) {
+                System.out.println("Вы ввели не число");
+                sc.next();
+            }
+            userInput = sc.nextInt();
             if (userInput > guessNumber) {
                 System.out.println("Неверно, загаданное число меньше");
             } else if (userInput < guessNumber) {
