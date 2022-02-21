@@ -7,14 +7,14 @@ public class Task1 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number to count recursion: ");
         int userInput = sc.nextInt();
-        countRecursion(userInput);
+        System.out.println(countRecursion(userInput));;
     }
 
-    public static void countRecursion(int num) {
+    public static int countRecursion(int num) {
         int recursion = 1;
         for (int i = 1; i <= num; i++) {
             recursion *= i;
         }
-        System.out.println(recursion);
+        return recursion;
     }
 }
